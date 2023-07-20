@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+/* Standard everything */
+* {
+  padding: 0;
+  margin: 0;
+  text-transform: none;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "lato", "sans-serif";
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.87));
+}
+/* Nav */
+.navigation {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 50px;
+  position: absolute;
+}
+.navigation h1 {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+li {
+  margin-left: 50px;
+  font-size: 25px;
+}
+.links {
+  display: flex;
+  align-items: center;
+}
+.links li {
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+}
+.links li a {
+  color: rgba(255, 255, 255, 0.804);
+}
+.links li a:hover {
+  color: white;
+}
+.sign_in {
+  margin-right: 70px;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.804);
+}
+.sign_in:hover {
+  color: white;
+}
+.sign_in_btn {
+  width: 20px;
+  height: 20px;
+}
+
+.log_out {
+  margin-right: 80px;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.804);
+}
+/* header */
+
+/* Slideshow container */
+.slideshow-container {
+  padding-bottom: 20px;
+  width: 100vw;
+  height: 600px;
+  background-position: center;
+  background-size: 1500px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.87));
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-timing-function: ease; /* Use a smooth easing function */
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fancy {
+  background-color: transparent;
+  border: 2px solid #e01a55;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  left: 220px;
+  bottom: 270px;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 2em;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+}
+
+.fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: #e01a55;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: white;
+  background: #e01a55;
+}
+
+.fancy:hover::before {
+  width: 0.9375rem;
+  background: white;
+}
+
+.fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}
+header .logo {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  left: 150px;
+  top: 100px;
+}
+/* Movies */
+.week .day {
+  background-color: transparent;
+  height: 80px;
+  width: 80px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+}
+.week {
+  display: flex;
+  justify-content: center;
+  float: left;
+}
+.week .day .p {
+  letter-spacing: 1px;
+  padding: 10px;
+  padding-bottom: 15px;
+}
+.day.one {
+  background-color: gray;
+}
+.line {
+  border-top: 1px solid #1f1e1e;
+  margin: 10px auto;
+  width: 94%;
+}
+h2 {
+  font-size: 28px;
+  color: #fff;
+  margin-left: 20px;
+  margin-top: 10px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0px 50px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+section .cards {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+section .cards::-webkit-scrollbar {
+  display: none;
+}
+section .cards .card {
+  position: relative;
+  min-width: 130px;
+  height: 180px;
+  border-radius: 8px;
+  margin-right: 10px;
+  background: black;
+  transition: 0.3s linear;
+}
+section .cards .card .poster {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  position: relative;
+}
+section .cards .card:hover {
+  min-width: 300px;
+  overflow: hidden;
+}
+section .cards .card .rest_card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  left: 0;
+  top: 0;
+  z-index: 9999999;
+  opacity: 0;
+  transition: 1s linear;
+}
+section .cards .card .rest_card img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  z-index: -1;
+}
+section .cards .card .rest_card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #000);
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+section .cards .card .rest_card .cont {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+}
+section .cards .card .rest_card .cont .sub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .cards .card .rest_card .cont .sub p {
+  font-size: 12px;
+  font-weight: 400;
+  columns: rgb(255, 255, 255, 0.7);
+}
+section .cards .card .rest_card .cont .sub h3 {
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+section .cards .card .rest_card .cont .sub h3 span {
+  background: yellow;
+  color: #000000;
+  padding: 0px 3px;
+  margin: 0px 5px 0px 10px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+section .cards .card .rest_card .cont .sub h3 i {
+  margin-right: 3px;
+}
+section .cards .card:hover .rest_card {
+  opacity: 1;
+}
+section .bi-chevron-left {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  width: 25px;
+  height: 25px;
+  background: rgb(255, 255, 255, 0.3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s linear;
+  z-index: 999999999;
+  opacity: 0;
+}
+section:hover .bi-chevron-left {
+  opacity: 1;
+}
+section .bi-chevron-right {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  width: 25px;
+  height: 25px;
+  background: rgb(255, 255, 255, 0.3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s linear;
+  z-index: 999999999;
+  opacity: 0;
+}
+
+section:hover .bi-chevron-right {
+  opacity: 1;
+}
+/* Footer */
+footer {
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.87));
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer ul {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  justify-content: center;
+}
+footer span {
+  color: white;
+  padding-bottom: 10px;
+}

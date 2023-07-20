@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    
+    background-color: black;
+}
+.navigation{
+    top: 1px;
+    width: 100%;
+    display: flex;
+    text-align: center;    
+    justify-content:space-between;
+    padding: 50px;
+    position: absolute;
+}
+.navigation h1{
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+}
+li{
+    margin-left:50px;
+    font-size: 25px;
+}
+.links{
+    display: flex;
+    align-items: center;}
+.links li{
+    margin:0 30px;
+    display: flex;
+    align-items: center;
+}
+.links li a{
+    color: rgba(255, 255, 255, 0.804);
+}
+.links li a:hover{
+    color: white;
+}
+.sign_in{
+    font-size: 25px;
+    color:rgba(255, 255, 255, 0.804);
+}
+.sign_in:hover{
+    color:white
+}
+.sign_in_btn{
+    width: 20px;
+    height: 20px;
+}
+
+.log_out{
+    margin-right: 80px;
+    font-size: 25px;
+    color:rgba(255, 255, 255, 0.804);
+}
+.about{
+    display: flex;
+    margin-top: 130px;
+    background-color:black ;
+    background: url(img/fondcinema.png) no-repeat;
+    background: size 70%; 
+    overflow: hidden;
+    padding: 30px 0;
+}
+.inner-section{
+    width: 60%;
+    float: right;
+    margin-left: 600px;
+    background-color: #201f28 ;
+    padding: 120px;
+    box-shadow: 0 0 5px rgba(93, 85, 85, 0.4), 0 0 10px rgba(106, 98, 98, 0.3);
+    height: 560px;
+    border-radius: 10px;
+}
+.inner-section h1{
+    position: absolute;
+    top: 200px;
+    font-size: 40px;
+    font-weight: 900;
+    color: #f5f5f5
+}
+
+.aboutustext {
+    font-size: 18px;
+    color: white;
+    line-height: 30px;
+    text-align: justify;
+}
+footer{
+    background:linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.87));
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+footer ul{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    justify-content: center;
+}
+footer span{
+    color: white;
+    padding-bottom: 10px;
+}
+
